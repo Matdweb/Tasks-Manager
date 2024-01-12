@@ -1,0 +1,88 @@
+.container-estados, .container-encargados, .container-sub-tareas {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .container-estados .container-opciones-estado, .container-encargados .container-opciones-encargado, .container-opciones-sub-tareas {
+    position: absolute;
+    background: #2f3640;
+    color: #f5f6fa;
+    height: 0;
+    margin-top: 40px;
+    width: 130px;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 3px;
+    overflow: hidden;
+    order: 1;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    flex-flow: column nowrap;
+    overflow-y: scroll;
+  }
+
+  .container-opciones-sub-tareas{
+    width: 200px;
+  }
+  
+  .seleccion, .encargado, .ver-sub-tarea {
+    text-align: center;
+    color: #f5f6fa;
+    height: 40px;
+    order: 0;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container-estados .container-opciones-estado.active, .container-encargados .container-opciones-encargado.active, .container-opciones-sub-tareas.active {
+    height: 160px;
+    opacity: 1;
+  }
+
+  .container-opciones-sub-tareas.active{
+    height: fit-content;
+  }
+
+  .container-tareas .container-tabla .tabla .fila label:nth-child(6):hover .container-opciones-sub-tareas.active{
+    transform: translateX(-25px);
+  }
+  
+  .container-opciones-estado .opcion, .container-opciones-encargado .Integrante, .container-opciones-sub-tareas .sub-tarea{
+    width: 100%;
+    border-bottom: 3px solid #071425;
+    padding: 10px 5px;
+    cursor: pointer;
+  }
+
+  .container-opciones-estado .opcion:nth-child(4), .container-opciones-encargado .Integrante:nth-child(7) {
+    border: none;
+  }
+
+  .container-opciones-estado .opcion:hover, .container-opciones-encargado .Integrante:hover, .container-opciones-sub-tareas .sub-tarea:hover {
+    background: #414b57;
+  }
+  
+  .container-estados label, .container-encargados label, .container-sub-tareas label {
+    cursor: pointer;
+  }
+  
+  .container-estados .opcion .radio, .container-encargados .Integrante .radio, .container-sub-tareas .sub-tarea .radio {
+    display: none;
+  }
+
+  .container-opciones-estado::-webkit-scrollbar, .container-opciones-encargado::-webkit-scrollbar, .container-opciones-sub-tareas::-webkit-scrollbar {
+    position: fixed;
+    width: 8px;
+    background: #0d141f;
+    border-radius: 0 4px 4px 0;
+  }
+  
+  .container-opciones-estado::-webkit-scrollbar-thumb, .container-opciones-encargado::-webkit-scrollbar-thumb, .container-opciones-sub-tareas::-webkit-scrollbar-thumb{
+    position: fixed;
+    background: #525861;
+    border-radius: 0 4px 4px 0;
+  }

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cc7616c0ac.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilos-task-manager/estilo-tareas.css">
+    <link rel="stylesheet" href="estilos-task-manager/estilos-info-usuario.css">
+    <link rel="stylesheet" href="estilos-task-manager/estilos-select-estados.css">
+    <link rel="stylesheet" href="estilos-task-manager/estilos-responsive.css">
+    <title>Gestion de tareas - Matweb</title>
+</head>
+<body>
+    <div class="container-perfil-tareas">
+        <div class="container-perfil">
+            <input style="transform: scale(0);" type="checkbox" id="input-cerrar-perfil">
+            <label for="input-cerrar-perfil" class="cerrar-perfil"> <i class="fa-solid fa-angle-left"></i> </label>
+            <div class="container-usuario">
+                <div class="imagen-usuario">
+                    <img src="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+                </div>
+                <div class="nombre-usuario"><h3>Ernesto Fernandez</h3></div>
+            </div>
+            <div class="container-info-usuario">
+                <div class="container-dato-usuario">
+                    <h3>Tareas completadas</h3>
+                    <svg>
+                        <circle cx="50" cy="50" r="50"></circle>
+                        <circle cx="50" cy="50" r="50"></circle>
+                    </svg>
+                    <span>100%</span>
+                </div>
+                <div class="container-dato-usuario">
+                    <h3>Tareas por completar</h3>
+                    <svg>
+                        <circle cx="50" cy="50" r="50"></circle>
+                        <circle cx="50" cy="50" r="50"></circle>
+                    </svg>
+                    <span>100%</span>
+                </div>
+                <div class="container-dato-usuario">
+                    <h3>Responsabilidad</h3>
+                    <svg>
+                        <circle cx="50" cy="50" r="50"></circle>
+                        <circle cx="50" cy="50" r="50"></circle>
+                    </svg>
+                    <span>100%</span>
+                </div>
+                <div class="container-dato-usuario">
+                    <h3>Efectividad</h3>
+                    <svg>
+                        <circle cx="50" cy="50" r="50"></circle>
+                        <circle cx="50" cy="50" r="50"></circle>
+                    </svg>
+                    <span>100%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-tareas">
+            <div class="container-tabla tabla-0">
+                <h2 onclick="ModificarNomTabla(0)">NOMBRE TABLA</h2>
+                <div class="tabla">
+                    <div class="fila">
+                        <label>Tarea</label>
+                        <label>Encargado</label>
+                        <label>Estado</label>
+                        <label>Descripcion</label>
+                        <label>Fecha</label>
+                        <label>Sub-Tareas</label>
+                    </div>
+                    <div class="fila">
+                        <label onclick="ModificarTexto(0,1,0)"><p>Tarea</p></label>
+                        <label>
+                            <div class="container-encargados"> 
+                                <div onclick="DesplegarEncargados(0,0)" class="encargado">
+                                    Encargado
+                                </div>
+                                <div class="container-opciones-encargado">
+                                    <div class="Integrante">
+                                      <input type="radio" class="radio"/>
+                                      <span onclick="elegirEncargado(0,0,0)">Nadie</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                        <label>
+                            <div class="container-estados"> 
+                                <div onclick="DesplegarEstados(0,0)" class="seleccion">
+                                    Estado
+                                </div>
+                                <div class="container-opciones-estado">
+                                </div>
+                            </div>
+                        </label>
+                        <label onclick="ModificarTexto(0,1,3)"><p>Descripcion</p></label>
+                        <label><input onblur="tareasXRealizar(); efectividadUsuario(); Responsabilidad();" type="date" name="" id="fecha" data-date-format="DD MMMM YYYY" value="2022-09-21"></label>
+                        <label>
+                            <div onclick="agregarSubTarea(0,0)" class="btn-sub-tareas"><i class="fa-solid fa-plus"></i></div>
+                            <div class="container-sub-tareas"> 
+                                <div onclick="DesplegarSubTareas(0,0)" class="ver-sub-tarea">
+                                    Sub-Tareas
+                                </div>
+                                <div class="container-opciones-sub-tareas">
+                                    <div class="sub-tarea">
+                                      <input type="radio" class="radio"/>
+                                      <span onclick="elegirSubTarea(0,0,0)">Sub-tarea 1</span>
+                                    </div>
+                                    <div class="sub-tarea">
+                                        <input type="radio" class="radio"/>
+                                        <span onclick="elegirSubTarea(0,0,1)">Sub-tarea 2</span>
+                                      </div>
+                                      <div class="sub-tarea">
+                                        <input type="radio" class="radio"/>
+                                        <span onclick="elegirSubTarea(0,0,2)">Sub-tarea 3</span>
+                                      </div>
+                                      <div class="sub-tarea">
+                                        <input type="radio" class="radio"/>
+                                        <span onclick="elegirSubTarea(0,0,3)">Sub-tarea 4</span>
+                                      </div>
+                                </div>
+                            </div>
+                            <div onclick="eliminarSubTarea(0,0)" class="btn-sub-tareas"><i class="fa-solid fa-minus"></i></div>
+                        </label>
+                        <label for="btn-modulo">
+                            <i onclick="Modulo(0,1)" class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </label>
+                    </div>
+                    <div class="fila">
+                        <label onclick="ModificarTexto(0,2,0)"><p>Tarea</p></label>
+                        <label>
+                            <div class="container-encargados"> 
+                                <div onclick="DesplegarEncargados(0,1)" class="encargado">
+                                    Encargado
+                                </div>
+                                <div class="container-opciones-encargado">
+                                    <div class="Integrante">
+                                      <input type="radio" class="radio"/>
+                                      <span onclick="elegirEncargado(0,1,0)">Nadie</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                        <label>
+                            <div class="container-estados">
+                                <div onclick="DesplegarEstados(0,1)" class="seleccion">
+                                    Estado
+                                </div>
+                                <div class="container-opciones-estado">
+                                </div>
+                            </div>
+                        </label>
+                        <label onclick="ModificarTexto(0,2,3)"><p>Descripcion</p></label>
+                        <label><input onblur="tareasXRealizar(); efectividadUsuario(); Responsabilidad();" type="date" name="" id="fecha" data-date-format="DD MMMM YYYY" value="2022-09-21"></label>
+                        <label>
+                            <div onclick="agregarSubTarea(0,1)" class="btn-sub-tareas"><i class="fa-solid fa-plus"></i></div>
+                            <div class="container-sub-tareas"> 
+                                <div onclick="DesplegarSubTareas(0,1)" class="ver-sub-tarea">
+                                    Sub-Tareas
+                                </div>
+                                <div class="container-opciones-sub-tareas">
+                                    <div class="sub-tarea">
+                                      <input type="radio" class="radio"/>
+                                      <span onclick="elegirSubTarea(0,1,0)">Sub-tarea 1</span>
+                                    </div>
+                                    <div class="sub-tarea">
+                                        <input type="radio" class="radio"/>
+                                        <span onclick="elegirSubTarea(0,1,1)">Sub-tarea 2</span>
+                                      </div>
+                                </div>
+                            </div>
+                            <div onclick="eliminarSubTarea(0,1)" class="btn-sub-tareas"><i class="fa-solid fa-minus"></i></div>
+                        </label>
+                        <label onclick="Modulo(0,2)" for="btn-modulo">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </label>
+                    </div>
+                </div>
+                <div onclick="AgregarFila(0)" class="cont-agregar-fila"><h4 style="margin-left: 7px;">+ Nueva Fila</h4></div>
+                <h3 onclick="AgregarTabla(0)">+ Nueva Tabla</h3>
+            </div>
+
+        </div>
+        <div class="container-modulo">
+            <input type="checkbox" id="btn-modulo">
+            <div class="modulo">
+                <div class="content-modulo">
+                    <div class="modulo-tarea"></div>
+                    <div class="modulo-encargado"></div>
+                    <div class="modulo-estado"></div>
+                    <div class="modulo-descripcion"></div>
+                    <div class="modulo-fecha"></div>
+                    <div class="modulo-sub-tareas"></div>
+                    <div class="eliminar-fila"><i class="fa-solid fa-trash"></i><p> Eliminar</p></div>
+                </div>
+            </div>
+        </div>
+    <script src="JavaScript/objtTabla.js"></script>
+    <script src="JavaScript/Funciones-objt-Tabla.js"></script>
+    <script src="JavaScript/Funciones-sub-menus.js"></script>
+    <script src="JavaScript/estadisticas-usuario.js"></script>
+</body>
+</html>

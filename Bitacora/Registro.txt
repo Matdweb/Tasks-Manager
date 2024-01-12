@@ -1,0 +1,82 @@
+Desarrollo de la interfaz
+Desarrollo del objt Fila 
+desarrollo del objt Tabla 
+16/09/22   22:17
+
+Propuesta de eliminacion del objt Fila 
+ -Manejo del Sistema por medio de arreglo de objts Tabla
+ 18/09/22   18:42
+
+Desarrollo del metodo NuevaTabla(), funcionamiento exitoso
+Desarrollo del metodo modificarTexto(), funcionamiento exitoso
+Desarrollo del metodo agregarFila(), funcionamiento exitoso
+Desarrollo del metodo nuevoNomTabla(), funcionamiento exitoso
+Desarrollo de de difernetes funciones para el funcionamiento de los metodos realizados
+
+Restructuracion de los documetos css para mejor organizacion 
+Desarrollo del metodo modificarEstado(),funcionamiento exitoso
+Desarrollo del metodo modificarEncargado(),funcionamiento exitoso
+Desarrollo del metodo agregarSubGrupo()
+Integraciones en estructuas HTML 
+Se integra el atributo "subGrupos" al objt Tabla, para que se lleve un orden mas organizado de esto
+19/09/22   21:55
+
+Desarrollo de la aplicacion
+Desarrollo de la columna "Estados", "encargados", "Fecha", "Sub-tareas", Front-ed funcional
+Desarrollo de funciones para el funciomiento de menus deplegables
+Arreglos a estructuras css
+21/09/2022   00:10
+
+Eliminacion de una hoja de estilos del select integrado, ya que no era necesaria
+ELiminacion del objt fila, ya que no se le encontro uso sintactico adecuado
+Ajuste adecuado de estilizacion y estructras HTML 
+Correcion del metodo "agregarFila", adapatacion a las integracion a estructras HTML realizadas
+22/09/22   00:11
+
+Modificacion de metodos agregar fila y agregar tabla, para el funcionamiento con nueva estructura HTML 
+Modificacion de funciones y metodos para que trabajen con el sistema de coordenadas (tabla,fila,columna)
+24/09/22   01:11
+
+Desarrollo del metodo agregarSubTarea(), funcionalidad exitosa
+Desarrollo del metodo eliminarSubtarea(), funcionalidad exitosa
+Desarrollo de los elementos HTML necesarios para integrar funcionalidades de metodos desarrollados Ddesarrollo del front-ed en container-tareas funcional 
+25/09/22   23:06
+
+Desarrollo del modulo para mostrar informacion de cada tarea, funciomiento no exitoso
+28/09/22   00:10
+
+Desarrollo del modulo de cada tarea, funcionamiento exitoso
+28/09/22    20:03
+
+Desarrollo de estadistica tareas completadas, funcionamiento exitoso
+Desarrollo de estaditica tareas por completar, funciomiento exitoso
+Pendiente desarrollo del resto de estadisticas del usuario
+28/09/22   23:57
+
+Desarrollo de la funcion responsbilidad
+Desarrollo del metodo efectividadUsuario exitoso
+29/09/22    15:57
+
+Desarrollo de las funciones en estadisticas-usuario.js, para el funcionamiento de los graficos con las estadisticas del usuario
+29/09/22   21:45
+
+Desarrollo del btn cerrar perfil, funcionamiento pendiente
+01/10/22
+
+Desarrollo exitoso del btn cerrar perfil
+01/10/22    01:58
+
+
+Mejora de manejo de eliminicacion de filas o tareas 
+01/10/22    05:16
+
+Desarrollo del btn cerrar perfil funcionalidad 100% exitosa
+Integracion de la eliminacion de nuevas filas de manera exitosa en cada metodo exitoso
+Funcionalidades principales completas para al APP 
+02/10/22   18:25
+
+adaptacion del modulo de informacion en responsive
+05/10/22   19:37
+
+PENDIENTES:  
+- Correciones de reinicio de fechas cuando se agrega una fila o tabla
